@@ -1,24 +1,34 @@
-import React from 'react';
-import './indexx.css';
+import React from "react";
+import "./indexx.css"; // File CSS Anda
 
-const Header: React.FC = () => {
+const Header = () => {
   return (
-    <header className="header">
-      <div className="container">
-        <h1 className="logo">Artcyclopedia</h1>
-        <nav>
-          <ul className="nav">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#collection">Collection</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <div className="search">
-          <input type="text" placeholder="Search art" />
-          <button>🔍</button>
+    <header>
+      {/* Top Section: Logo and Search */}
+      <div className="top-bar">
+        <div className="logo">
+          <h1>Artcyclopedia</h1>
+        </div>
+        <div className="actions">
+          {/* Search Bar */}
+          <div className="search-bar">
+            <input type="text" placeholder="Search art" />
+          </div>
+
+          {/* Profile Icon */}
+          <div className="profile">
+    
+          </div>
         </div>
       </div>
+
+      {/* Bottom Section: Navigation */}
+      <nav className="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Collections</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+      </nav>
     </header>
   );
 };

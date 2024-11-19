@@ -1,12 +1,13 @@
 import React from 'react';
 import './indexx.css';
 
-const Hero: React.FC = () => {
+const Hero = () => {
   return (
     <section className="hero">
-      <div className="container">
-        <h2>Lorem ipsum dolor sit amet consectetur</h2>
-        <button>Start Exploring</button>
+      <div className="hero-content">
+        <h1>Lorem ipsum dolor sit amet consectetur</h1>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere</p>
+        <button className="hero-button">Start Exploring</button>
       </div>
     </section>
   );
