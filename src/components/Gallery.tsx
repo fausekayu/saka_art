@@ -3,10 +3,12 @@ import './indexx.css';
 
 const Gallery: React.FC = () => {
   const artworks = [
-    { title: 'The Potato Eaters, 1885', artist: 'Vincent van Gogh', image: 'image1.jpg' },
-    { title: 'Girl with a Pearl Earring', artist: 'Johannes Vermeer', image: 'image2.jpg' },
-    { title: 'Starry Night, 1889', artist: 'Vincent van Gogh', image: 'image3.jpg' },
-    { title: 'Mona Lisa', artist: 'Leonardo da Vinci', image: 'image4.jpg' },
+    { title: 'The Potato Eaters, 1885', artist: 'Vincent van Gogh', image: '/lukis4.png' },
+    { title: 'Girl with a Pearl Earring', artist: 'Johannes Vermeer', image: '/lukis2.png' },
+    { title: 'Starry Night, 1889', artist: 'Vincent van Gogh', image: '/lukis3.png' },
+    { title: 'Martina Bulkova', artist: '404', image: '/lukis5.png' },
+    { title: '404', artist: '404', image: '/lukis6.png' },
+    { title: 'Dan Cristian Pădureț', artist: '404', image: '/lukis7.png' },
   ];
 
   return (

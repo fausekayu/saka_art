@@ -108,8 +108,7 @@ header .nav-links a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  text-align: center;
+
 }
 
 .hero::before {
@@ -151,6 +150,7 @@ header .nav-links a:hover {
 
 /* Gallery Section */
 .gallery {
+  display: grid;
   padding: 40px 20px;
   background-color: #f9f9f9;
   text-align: center;
@@ -162,7 +162,7 @@ header .nav-links a:hover {
 
 .gallery .artworks {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 2fr);
   gap: 20px;
 }
 
