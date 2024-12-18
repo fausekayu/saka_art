@@ -1,14 +1,14 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import './indexx.css';
 
 const Gallery: React.FC = () => {
   const artworks = [
-    { title: 'The Potato Eaters, 1885', artist: 'Vincent van Gogh', image: '/lukis4.png' },
-    { title: 'Girl with a Pearl Earring', artist: 'Johannes Vermeer', image: '/lukis2.png' },
-    { title: 'Starry Night, 1889', artist: 'Vincent van Gogh', image: '/lukis3.png' },
-    { title: 'Martina Bulkova', artist: '404', image: '/lukis5.png' },
-    { title: '404', artist: '404', image: '/lukis6.png' },
-    { title: 'Dan Cristian Pădureț', artist: '404', image: '/lukis7.png' },
+    { title: 'The Potato Eaters, 1885', artist: 'Start Explore', image: '/lukis4.png', link: 'penjelasan' },
+    { title: 'Girl with a Pearl Earring', artist: 'Start Explore', image: '/lukis2.png', link: '/explore/pearl-earring' },
+    { title: 'The Starry Night, 1889', artist: 'Start Explore', image: '/lukis8.png', link: '/explore/starry-night' },
+    { title: 'Mona Lisa, 1503', artist: 'Start Explore', image: '/lukis9.png', link: '/explore/mona-lisa' },
+    { title: 'Potrait of Dr. Gachet, 1890', artist: 'Start Explore', image: '/lukis10.png', link: '/explore/dr-gachet' },
+    { title: 'The Persistence of Memory, 1931', artist: 'Start Explore', image: '/lukis11.png', link: '/explore/persistence-memory' },
   ];
 
   return (
@@ -20,7 +20,13 @@ const Gallery: React.FC = () => {
             <div key={index} className="artwork">
               <img src={artwork.image} alt={artwork.title} />
               <h4>{artwork.title}</h4>
-              <p>{artwork.artist}</p>
+              <button
+                className="explore-button"
+                onClick={() => window.location.href = artwork.link}
+              >
+                {artwork.artist}
+              </button>
+              
             </div>
           ))}
         </div>
@@ -28,5 +34,7 @@ const Gallery: React.FC = () => {
     </section>
   );
 };
+
+
 
 export default Gallery;

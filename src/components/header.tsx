@@ -1,7 +1,19 @@
-import React from "react";
-import "./indexx.css"; // File CSS Anda
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./indexx.css"; 
 
-const Header = () => {
+const Header: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState(""); // State for the input
+  const navigate = useNavigate(); // Navigate to search results page
+
+  // Function to handle search submit
+  const handleSearch = (event: React.FormEvent) => {
+    event.preventDefault();
+    if (searchQuery.trim() !== "") {
+      navigate(`/search?query=${encodeURIComponent(searchQuery)}`); // Navigate to search page
+    }
+  };
+
   return (
     <header>
       {/* Top Section: Logo and Search */}
@@ -11,22 +23,27 @@ const Header = () => {
         </div>
         <div className="actions">
           {/* Search Bar */}
-          <div className="search-bar">
-            <input type="text" placeholder="Search art" />
-          </div>
-
-          {/* Profile Icon */}
-          <div className="profile">
-    
-          </div>
+          <form className="search-bar" onSubmit={handleSearch}>
+            <input 
+              type="text" 
+              placeholder="Search art" 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)} 
+            />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+        {/* Profile Icon (Optional) */}
+        <div className="profile">
+          {/* You can add profile-related content here */}
         </div>
       </div>
 
       {/* Bottom Section: Navigation */}
       <nav className="nav-links">
-        <a href="#">Home</a>
-        <a href="#">Collections</a>
-        <a href="#">About Us</a>
+        <a href="/landing">Home</a> {/* Correct path for Home */}
+        <a href="/koleksi">Collections</a>
+        <a href="/about">About Us</a>
         <a href="#">Contact</a>
       </nav>
     </header>

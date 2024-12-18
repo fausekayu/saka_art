@@ -16,7 +16,7 @@ const LoginPage: React.FC = () => {
       </div>
       <div className="login-right">
         <h2>Login your Account</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="input-group">
             <label htmlFor="username">Username</label>
             <input type="text" id="username" placeholder="Username" />
